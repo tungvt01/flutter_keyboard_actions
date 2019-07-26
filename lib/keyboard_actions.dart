@@ -423,7 +423,9 @@ class FormKeyboardActionState extends State<FormKeyboardActions>
     return SizedBox(
       width: double.maxFinite,
       child: BottomAreaAvoider(
-          areaToAvoid: _offset, autoScroll: true, child: widget.child),
+          areaToAvoid: _offset,
+          autoScroll: widget.autoScroll,
+          child: widget.child),
     );
   }
 }
