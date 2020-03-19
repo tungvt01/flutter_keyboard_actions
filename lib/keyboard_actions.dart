@@ -125,6 +125,13 @@ class FormKeyboardActionState extends State<FormKeyboardActions>
   double _offset = 0;
   PreferredSizeWidget _currentFooter;
 
+   @override
+   void setState(fn) {
+    if(mounted){
+      super.setState(fn);
+    }
+  }
+
   /// If the keyboard bar is on for the current platform
   bool get _isAvailable {
     return config.keyboardActionsPlatform == KeyboardActionsPlatform.ALL ||
